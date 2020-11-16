@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClubPlayer
-{
+{ 
     class Program
     { 
-        static void Main(string[] args)
+        static void Main(string[] args)                                                                                
         { 
             var rap = CreateList();
             var pop = CreateList();
@@ -42,6 +42,7 @@ namespace ClubPlayer
                 n.prev = tempRoot;
                 n.next = tempRoot;
                 n.data = data;
+
                 return;
             }
             while (node.next != tempRoot)
@@ -75,6 +76,7 @@ namespace ClubPlayer
                 n = n.next;
             }
             while (n != popRoot);
+
             return counter;
         }
 
@@ -88,10 +90,12 @@ namespace ClubPlayer
             first.next = tempNext;
             first.prev = tempPrev;
            
-
             return second;
         }
-
+        static void DoSomething()
+        {
+            //do something
+        }
         static Node sortItems(Node n)
         {
             Node temp;
