@@ -92,10 +92,7 @@ namespace ClubPlayer
            
             return second;
         }
-        static void DoSomething()
-        {
-            //do something
-        }
+       
         static Node sortItems(Node n)
         {
             Node temp;
