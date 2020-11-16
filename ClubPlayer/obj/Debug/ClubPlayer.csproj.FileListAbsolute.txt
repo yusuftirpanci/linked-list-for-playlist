@@ -1,0 +1,6 @@
+C:\Users\Alperen Yurtseven\source\repos\ClubPlayer\ClubPlayer\bin\Debug\ClubPlayer.exe.config
+C:\Users\Alperen Yurtseven\source\repos\ClubPlayer\ClubPlayer\bin\Debug\ClubPlayer.exe
+C:\Users\Alperen Yurtseven\source\repos\ClubPlayer\ClubPlayer\bin\Debug\ClubPlayer.pdb
+C:\Users\Alperen Yurtseven\source\repos\ClubPlayer\ClubPlayer\obj\Debug\ClubPlayer.csprojAssemblyReference.cache
+C:\Users\Alperen Yurtseven\source\repos\ClubPlayer\ClubPlayer\obj\Debug\ClubPlayer.exe
+C:\Users\Alperen Yurtseven\source\repos\ClubPlayer\ClubPlayer\obj\Debug\ClubPlayer.pdb
