@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClubPlayer
-{ 
+{
     class Program
-    { 
+    {
+        static int[] array = {
+            8,23,16,46,82,-31,0,-62,15 };
         static void Main(string[] args)                                                                                
         { 
             var rap = CreateList();
@@ -16,10 +18,7 @@ namespace ClubPlayer
             AddPostItem(pop, "AlperenOnal");
             AddPostItem(pop, "ZArdaTasyurek");
             AddPostItem(pop, "YusufTirpanci");
-            PrintList(pop);
-            Console.WriteLine(ListLenght(pop).ToString());
-            pop=sortItems(pop);
-            PrintList(pop);
+            sortItems(array);
     
         } 
         //  10 5 8  9
@@ -80,60 +79,44 @@ namespace ClubPlayer
             return counter;
         }
 
-        static Node SwapNodes(Node first, Node second)
-        {
-            Node tempNext = second.next;
-            Node tempPrev = second.prev;
-
-            second.next = first.next;
-            second.prev = first.prev;
-            first.next = tempNext;
-            first.prev = tempPrev;
-           
-            return second;
-        }
        
-        static Node sortItems(Node n)
+       
+        static void sortItems(int[] dizi)
         {
-            Node temp;
-            int i, j;
-            bool swapped;
+            int counter=0;
+            int enkucuk=dizi[counter];
+            int temp=0;
 
-            for (i = 0; i <= ListLenght(n); i++)
+            for (int i = 0; i < dizi.Length; i++) //Algoritma ile diziyi baştan sonra okuyup en küçüğünü bulup 1. indise yerleştir.Daha sonra 2.indisi bulup 
             {
+                
 
-                temp = n;
-                swapped = false;
-                for (j = 0; j < ListLenght(n) - i - 1; j++)
+                for (int j = i; j < dizi.Length; j++)
                 {
-
-                    Node n1 = temp;
-                    Node n2 = n1.next;
-                    byte[] bytes_n1 = Encoding.ASCII.GetBytes(n1.data);
-                    byte[] bytes_n2 = Encoding.ASCII.GetBytes(n2.data);
-
-                    if (bytes_n1[j] > bytes_n2[j])
+                  
+                    if (dizi[j] < enkucuk)
                     {
-                        temp = SwapNodes(n1, n2);
-                        swapped = true;
+                        enkucuk = dizi[j];
+                        temp = dizi[i];
+                        dizi[i] = enkucuk;
+                        dizi[j] = temp;
                     }
-                    if(bytes_n1[i] == bytes_n2[i])
-                    {
-
-                    }
-                    if(bytes_n1[i] < bytes_n2[i])
-                    {
-                        break;
-                    }
-
-                    temp = temp.next;
                 }
-                if (swapped) break;
+                counter++;
+                if (counter==dizi.Length)
+                {
+                    break;
+                }
+                enkucuk = dizi[counter];
+                
+            }
+            
+            foreach (var item in dizi)
+            {
+                Console.Write(item);
+                Console.Write(",");
             }
 
-
-
-            return n;
         }
 
     }
